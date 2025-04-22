@@ -12,3 +12,8 @@ output "ec2_amis" {
   description = "AMIs used for all EC2 instances"
   value       = [for ec2 in aws_instance.ec2 : ec2.ami]
 }
+
+output "ec2_ids" {
+  description = "ID for the EC2 instance"
+  value    = [for ec2 in aws_instance.ec2 : ec2.id]
+}

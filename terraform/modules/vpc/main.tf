@@ -4,7 +4,7 @@ module "vpc" {
   name = local.aws_vpc_name
   cidr = local.aws_vpc_cidr_block
 
-  azs             = [var.aws_az]
+  azs             = [var.aws_az, var.aws_az_backup]
   private_subnets = local.aws_private_subnet_cidr_block
   public_subnets  = local.aws_public_subnet_cidr_block
 

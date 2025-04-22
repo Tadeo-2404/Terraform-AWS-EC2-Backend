@@ -16,7 +16,7 @@ module "security_group" {
     {
       from_port   = 80
       to_port     = 80
-      protocol    = "http"
+      protocol    = "tcp"
       description = "User-service ports"
       cidr_blocks = "0.0.0.0/0"
     },
